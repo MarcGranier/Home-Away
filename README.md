@@ -4637,7 +4637,7 @@ export function calculateDaysBetween({
 }
 ```
 
-### BoookingCalendar
+### BookingCalendar
 
 ```tsx
 'use client';
