@@ -2,15 +2,16 @@ import * as z from 'zod';
 import { ZodSchema } from 'zod';
 
 export const profileSchema = z.object({
-  firstName: z
-    .string()
-    .min(2, { message: 'First name must be at least 2 characters' }),
-  lastName: z
-    .string()
-    .min(2, { message: 'Last name must be at least 2 characters' }),
-  username: z
-    .string()
-    .min(2, { message: 'Username must be at least 2 characters' }),
+  // firstName: z.string().max(5, { message: 'max length is 5' }),
+  firstName: z.string().min(2, {
+    message: 'first name must be at least 2 characters',
+  }),
+  lastName: z.string().min(2, {
+    message: 'last name must be at least 2 characters',
+  }),
+  username: z.string().min(2, {
+    message: 'username must be at least 2 characters',
+  }),
 });
 
 export function validateWithZodSchema<T>(
@@ -86,7 +87,7 @@ export const propertySchema = z.object({
     message: 'beds amount must be a positive number.',
   }),
   baths: z.coerce.number().int().min(0, {
-    message: 'baths amount must be a positive number.',
+    message: 'bahts amount must be a positive number.',
   }),
   amenities: z.string(),
 });

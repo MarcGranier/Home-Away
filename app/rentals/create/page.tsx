@@ -48,7 +48,7 @@ function CreatePropertyPage() {
           <h3 className='text-lg mt-8 mb-4 font-medium'>
             Accommodation Details
           </h3>
-          <CounterInput detail='guest' />
+          <CounterInput detail='guests' />
           <CounterInput detail='bedrooms' />
           <CounterInput detail='beds' />
           <CounterInput detail='baths' />

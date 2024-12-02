@@ -9,6 +9,7 @@ type PriceInputProps = {
 };
 
 function PriceInput({ defaultValue }: PriceInputProps) {
+  const name = 'price';
   return (
     <div className='mb-2'>
       <Label htmlFor={name} className='capitalize'>
