@@ -17,13 +17,13 @@ async function PropertiesContainer({
   if (properties.length === 0) {
     return (
       <EmptyList
-        heading='No results'
-        message='Try changing or removing some of your filters'
+        heading='No results.'
+        message='Try changing or removing some of your filters.'
         btnText='Clear Filters'
       />
     );
   }
 
-  return <div>PropertiesContainer</div>;
+  return <PropertiesList properties={properties} />;
 }
 export default PropertiesContainer;
