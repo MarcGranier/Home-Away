@@ -153,8 +153,6 @@ export const createPropertyAction = async (
         profileId: user.id,
       },
     });
-
-    return { message: 'property created' };
   } catch (error) {
     return renderError(error);
   }
