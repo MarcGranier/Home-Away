@@ -10,7 +10,7 @@ function NavSearch() {
   const { replace } = useRouter();
 
   const [search, setSearch] = useState(
-    searchParams.get('search)?.toString()') || ''
+    searchParams.get('search')?.toString() || ''
   );
 
   const handleSearch = useDebouncedCallback((value: string) => {
@@ -24,14 +24,14 @@ function NavSearch() {
   }, 500);
 
   useEffect(() => {
-    if (!searchParams) {
+    if (!searchParams.get('search')) {
       setSearch('');
     }
   }, [searchParams.get('search')]);
 
   return (
     <Input
-      type='search'
+      type='text'
       placeholder='find a property...'
       className='max-w-xs dark:bg-muted'
       onChange={(e) => {
